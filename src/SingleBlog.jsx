@@ -8,11 +8,11 @@ const SingleBlog = () => {
   const [blog, setBlog] = useState({});
   let navigate = useNavigate();
   const fetchSingleBlog = async () => {
-    const response = await axios.get("http://localhost:3000/blog/" + id);
+    const response = await axios.get("https://mern-3-p1-node-1.onrender.com/blog/" + id);
     setBlog(response.data.data);
   };
   const deleteBlog = async () => {
-    const response = await axios.delete("http://localhost:3000/blog/" + id);
+    const response = await axios.delete("https://mern-3-p1-node-1.onrender.com/blog/" + id);
     if (response.status === 200) {
       navigate("/");
     } else {

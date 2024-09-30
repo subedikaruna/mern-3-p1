@@ -21,7 +21,7 @@ const EditBlog = () => {
     });
   };
   const fetchSingleBlog = async () => {
-    const response = await axios.get("http://localhost:3000/blog/" + id);
+    const response = await axios.get("https://mern-3-p1-node-1.onrender.com/blog/" + id);
     if (response.status === 200) {
       setData({
         title: response.data.data.title,
@@ -38,7 +38,7 @@ const EditBlog = () => {
   const EditBlog = async (e) => {
     e.preventDefault();
     const response = await axios.patch(
-      "http://localhost:3000/blog/" + id,
+      "https://mern-3-p1-node-1.onrender.com/blog/" + id,
       data,
       {
         headers: {
